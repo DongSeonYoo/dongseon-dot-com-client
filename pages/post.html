@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>게시글 조회</title>
+    <link rel="stylesheet" type="text/css" href="../styles/post.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/common.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <button id="back-button">뒤로가기</button>
+      <h1 id="post-title"></h1>
+      <div id="post">
+        <div id="post-info-area">
+          <div id="post-info-temp-div"></div>
+        </div>
+
+        <div id="post-content" style="text-align: start"></div>
+      </div>
+
+      <h3 style="text-align: start; margin-left: 20px">댓글 작성</h3>
+      <input id="comment-input" placeholder="댓글을 작성해주세요" />
+      <button id="submit-comment-button" onclick="clickCommentSubmitBtn()">작성하기</button>
+
+      <div id="comment-count">댓글이 없습니다</div>
+
+      <div class="comments"></div>
+    </div>
+
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+  </body>
+</html>

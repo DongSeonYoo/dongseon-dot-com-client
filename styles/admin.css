@@ -1,0 +1,80 @@
+button {
+  border: none;
+  cursor: pointer;
+}
+
+#recent-search-area {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-button {
+  background-color: rgb(234, 218, 215);
+  border-radius: 5px;
+}
+
+#recent-search-area {
+  background-color: azure;
+}
+
+.recent-search {
+  background-color: antiquewhite;
+}
+
+.log-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.log {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.log .time {
+  width: 200px;
+}
+
+.log .ip {
+  width: 200px;
+}
+
+.log .status {
+  width: 100px;
+}
+
+.log .loginId {
+  width: 100px;
+}
+
+.log .method {
+  width: 100px;
+}
+
+.log .api {
+  flex: 1;
+}
+
+.request,
+.response {
+  flex: 1;
+}
+
+#menu-area-section {
+  display: flex;
+  gap: 10px;
+}
+
+#page-move-button-section {
+  text-align: center;
+}
+
+#column {
+  display: flex;
+  justify-content: space-around;
+}

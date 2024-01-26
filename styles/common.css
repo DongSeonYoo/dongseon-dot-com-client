@@ -1,0 +1,17 @@
+body {
+  background-image: url(../assets/home-background-image.jpg);
+  background-position: center;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}

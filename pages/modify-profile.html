@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>프로필 페이지</title>
+
+  <link rel="stylesheet" type="text/css" href="../styles/modify-profile.css">
+  <link rel="stylesheet" type="text/css" href="../styles/common.css">
+</head>
+
+<body>
+
+  <section id="container">
+
+    <div id="content">
+
+      <div class="profile-header">
+        <h1>내 프로필</h1>
+        <img id="preview" src="../assets/user.png">
+        <label for="file">
+            <div class="btn-upload">이미지 변경</div>
+        </label>
+        <input type="file" id="file" onchange="onchangeImg(this)">
+      </div>
+
+      <div class="profile-info">
+        <div class="user-info">
+
+          <div id="user-login-id" class="test">
+            <span id="id-lable" class="label">아이디</span>
+            <span id="id-form"></span>
+
+          <div id="user-name">
+            <span id="name-lable" class="label">이름</span>
+            <input id="name-form">
+          </div>
+
+          <div id="user-nickname">
+            <span id="phoneNumber-lable" class="label">전화번호</span>
+            <input id="phoneNumber-form">
+            <!-- <button id="check-phonenumber-duplicate">중복 체크</button> -->
+          </div>
+
+          <div id="user-email">
+            <span id="email-lable" class="label">이메일</span>
+            <input id="email-form">
+            <!-- <button id="check-email-duplicate">중복 체크</button> -->
+          </div>
+
+          <div id="user-created-date">
+            <span id="signup-date-lable" class="label">회원가입 날짜</span>
+            <span id="signup-date-form">
+          </span>
+
+          <div id="user-updated-date">
+            <span id="update-date-lable" class="label">최근 수정일</span>
+            <span id="update-date-form">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="edit-profile-button">프로필 편집</button>
+        <button id="home-button" type="button">홈 화면 가기</button>
+      </div>
+
+      <button id="drop-user-button" type="button">회원 탈퇴</button>
+    </div>
+
+  </section>
+
+  <script src="../scripts/common.js"></script>
+  <script src="../scripts/modify-profile.js"></script>
+</body>
+
+</html>
