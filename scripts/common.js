@@ -1,20 +1,21 @@
-const homeBtn = document.getElementById('home-button');
-const s3ImageUrl = 'http://yoodongseon.s3.ap-northeast-2.amazonaws.com';
+const homeBtn = document.getElementById("home-button");
+const s3ImageUrl = "http://yoodongseon.s3.ap-northeast-2.amazonaws.com";
+const serverUrl = "http://localhost:3000";
 
 // 이름, 토큰을 받아 쿠키를 생성
 const setCookie = (name, value) => {
-  document.cookie = name + '=' + (value || '');
+  document.cookie = name + "=" + (value || "");
 };
 
 // 매개변수로 온 이름의 쿠키를 가져옴, 쿠키의 value를 리턴
 const getCookie = (name) => {
   const cookieValue = document.cookie
-    .split(';')
+    .split(";")
     .map((cookie) => cookie.trim())
-    .find((cookie) => cookie.startsWith(name + '='));
+    .find((cookie) => cookie.startsWith(name + "="));
 
   if (cookieValue) {
-    return cookieValue.split('=')[1];
+    return cookieValue.split("=")[1];
   } else {
     return null;
   }
@@ -22,12 +23,12 @@ const getCookie = (name) => {
 
 // 매개변수로 온 이름의 쿠키를 지움
 const deleteCookie = (name) => {
-  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 };
 
 // accessToken이 있는지 확인, 있다면 true, 없다면 false
 const checkCookie = () => {
-  if (getCookie('accessToken')) {
+  if (getCookie("accessToken")) {
     return true;
   }
   return false;
@@ -52,9 +53,9 @@ const checkCookie = () => {
 // 관리자 권한 체크
 async function adminAuthCheck() {
   try {
-    const response = await fetch('/api/auth/admin');
+    const response = await fetch("/api/auth/admin");
     if (response.status !== 200) {
-      return (location.href = '/');
+      return (location.href = "/");
     }
   } catch (error) {
     console.log(error);
@@ -63,7 +64,7 @@ async function adminAuthCheck() {
 
 // 공용 homeBtn
 if (homeBtn) {
-  homeBtn.addEventListener('click', () => {
-    location.href = '/';
+  homeBtn.addEventListener("click", () => {
+    location.href = "/";
   });
 }
